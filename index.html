@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halcyon Motors | Concept Car Brand</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo">Halcyon Motors</div>
+        <div class="nav-links">
+          <a href="#models">Models</a>
+          <a href="#customizer">Customizer</a>
+          <a href="#studio">AI Studio</a>
+          <a href="#account">Account</a>
+        </div>
+        <button class="btn ghost" id="openLogin">Sign in</button>
+      </nav>
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">Electric performance. Crafted by imagination.</p>
+          <h1>Next-generation vehicles designed for the present moment.</h1>
+          <p class="subtitle">
+            Explore our visionary lineup, configure your personal build, and chat with
+            our AI concierge for instant guidance.
+          </p>
+          <div class="hero-cta">
+            <button class="btn primary" id="scrollCustomizer">Build yours</button>
+            <button class="btn secondary">Book a concept drive</button>
+          </div>
+        </div>
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
+            alt="Halcyon concept car"
+          />
+          <div class="hero-card-content">
+            <h3>Sentinel XR</h3>
+            <p>0-60 mph in 2.4s · 410 mi range · Tri-motor AWD</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="models" class="section">
+      <div class="section-header">
+        <h2>Concept Lineup</h2>
+        <p>Hand-built design studies with real-world specs and pricing.</p>
+      </div>
+      <div class="card-grid" id="modelGrid"></div>
+    </section>
+
+    <section id="customizer" class="section dark">
+      <div class="section-header">
+        <h2>Customization Studio</h2>
+        <p>Every choice updates the live render and performance profile.</p>
+      </div>
+      <div class="customizer">
+        <div class="customizer-view">
+          <img id="customizerImage" alt="Customized car" />
+          <div class="price-tag" id="customizerPrice"></div>
+        </div>
+        <div class="customizer-controls">
+          <label>
+            Select model
+            <select id="modelSelect"></select>
+          </label>
+          <label>
+            Exterior color
+            <select id="colorSelect"></select>
+          </label>
+          <label>
+            Wheel package
+            <select id="wheelSelect"></select>
+          </label>
+          <label>
+            Powertrain
+            <select id="powerSelect"></select>
+          </label>
+          <div class="specs" id="specList"></div>
+          <button class="btn primary">Reserve this build</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio" class="section">
+      <div class="section-header">
+        <h2>AI Concierge</h2>
+        <p>Ask about trims, delivery windows, and bespoke personalization.</p>
+      </div>
+      <div class="chat-container">
+        <div class="chat-log" id="chatLog"></div>
+        <form id="chatForm">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Ask Halcyon AI about specs, pricing, or delivery..."
+            autocomplete="off"
+          />
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="account" class="section dark">
+      <div class="section-header">
+        <h2>Owner Cloud</h2>
+        <p>Sign up to save builds, manage reservations, and unlock concierge support.</p>
+      </div>
+      <div class="account-grid">
+        <div class="account-panel">
+          <h3>Create account</h3>
+          <form id="signupForm">
+            <label>
+              Full name
+              <input type="text" id="signupName" required />
+            </label>
+            <label>
+              Email
+              <input type="email" id="signupEmail" required />
+            </label>
+            <label>
+              Password
+              <input type="password" id="signupPassword" required minlength="6" />
+            </label>
+            <button class="btn primary" type="submit">Sign up</button>
+            <p class="form-note" id="signupMessage"></p>
+          </form>
+        </div>
+        <div class="account-panel">
+          <h3>Login</h3>
+          <form id="loginForm">
+            <label>
+              Email
+              <input type="email" id="loginEmail" required />
+            </label>
+            <label>
+              Password
+              <input type="password" id="loginPassword" required />
+            </label>
+            <button class="btn secondary" type="submit">Log in</button>
+            <p class="form-note" id="loginMessage"></p>
+          </form>
+          <div class="login-status" id="loginStatus"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>
+        <h3>Halcyon Motors</h3>
+        <p>Concept mobility studio · Los Angeles, CA</p>
+      </div>
+      <p>© 2025 Halcyon Motors. All specs and pricing are fictional.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
